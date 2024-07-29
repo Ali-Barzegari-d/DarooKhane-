@@ -83,8 +83,8 @@ namespace DarooKhaneh
             SqlDataReader dr;
             cmd.Parameters.Clear();
             cmd.Connection = con;
-            cmd.CommandText = "select * from Daroo where Id=@N";
-            cmd.Parameters.AddWithValue("@N", txtCode.Text);
+            cmd.CommandText = "select * from Daroo where Id="+txtCode.Text;
+            //cmd.Parameters.AddWithValue("@N", txtCode.Text);
             con.Open();
             dr = cmd.ExecuteReader();
             if (dr.Read())
